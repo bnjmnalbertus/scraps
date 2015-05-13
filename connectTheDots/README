@@ -1,0 +1,20 @@
+Provides a "solution" to a dot-to-dot puzzle entered by the user.
+
+In a nutshell, the algorithm chooses a point in the middle of all the dots and 
+sorts the array of dots into the order in which they would be seen when 
+spinning around that point. Then, it just draws a line from each dot to the 
+next dot and a line from the last to the first dot. Pretty simple!
+
+The algorithm is of my own devising, and apart from Javascript's sorting 
+algorithm, it runs in linear time. I doubt that user input would exceed 
+several hundred points, though, so time complexity probably doesn't matter 
+much. If it did, the algorithm could be adapted to select a center point early 
+on and insert new dots already sorted.
+
+Initially, I came up with a much heavier algorithm that computed nested convex 
+hulls and connected them to each other. It was a fun exercise, but a bit like 
+hanging a picture with a tent stake.
+
+The most significant shortcoming I can think of is that it's not pretty. I 
+didn't put much effort into changing the default style, but it wouldn't be 
+difficult to adapt.
